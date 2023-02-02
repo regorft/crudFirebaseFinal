@@ -1,0 +1,49 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <span class="h3">Lista de usuarios</span>
+      <table class="table table-hover mt-4 mb-4">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of arrayListUser">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.phone}}</td>
+            <td>{{item.website}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="d-grid d-md-flex">
+        <span class="h3">Lista de registrados</span>
+        <button class="btn btn-dark btn-lg justify-content-md-end" routerLink="/crear-usuario">Agregar</button>
+      </div>
+      <table class="table table-hover mt-2">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mensaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of Users">
+            <td>{{user.nombre}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.mensaje}}</td>
+            <td><i class="fa-solid fa-trash text-danger" (click)="eliminarUsuario(user)"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "crudproyectofinal-ac1ad": {
+      "hosting": {
+        "crudFirebaseFinal": [
+          "crudproyectofinal-ac1ad"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "crudproyectofinal-ac1ad"
+  }
+}
